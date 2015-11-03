@@ -22,6 +22,10 @@ public class User {
 		this.greet = greet;
 	}
 
+	public User() {
+		super();
+	}
+
 	public User(String name, String greet) {
 		super();
 		this.name = name;

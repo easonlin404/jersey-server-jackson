@@ -1,6 +1,8 @@
 package com.eason.jersey;
 
+import javax.ws.rs.Consumes;
 import javax.ws.rs.GET;
+import javax.ws.rs.POST;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
@@ -21,6 +23,16 @@ public class Hello {
 		User user = new User("eason lin", "hello world !!");
 		return user;
 	}
-
+	
+	
+	
+	@POST
+	@Consumes({MediaType.APPLICATION_JSON})
+	@Produces(MediaType.APPLICATION_JSON)
+	public  User SayHello(User user) {
+		return user;
+	}
+	
+	
 
 }
